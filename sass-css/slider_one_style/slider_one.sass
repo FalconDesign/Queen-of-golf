@@ -9,14 +9,13 @@
 
   .slider_container
     position: relative
-    border: 1px solid white
     width: 80%
     height: 100%
 
     .slide
       position: absolute
       width: 80%
-      height: 80%
+      height: 75%
       left: 50%
       top: 50%
       +transform(translate(-50%, -50%))
@@ -40,7 +39,6 @@
 
     .controller
       width: 100%
-      border: 1px solid white
       position: absolute
       top: 50%
       +transform(translate(0%, -50%))
@@ -48,10 +46,23 @@
       .left_arrow
         +size(60px)
         float: left
-        background: gray
         cursor: pointer
+        background: url('../pictures/pic_for_slide_second/arrows.svg') 10px -5px
+        background-repeat: no-repeat
+        background-size: 300%
       .right_arrow
         +size(60px)
         float: right
-        background: gray
         cursor: pointer
+        background: url('../pictures/pic_for_slide_second/arrows.svg') -130px -5px
+        background-repeat: no-repeat
+        background-size: 300%
+
+    .slider_content
+      position: absolute
+      top: 90%
+      text-align: center
+      font:
+        size: 18px
+        family: $pt-serif
+      color: white

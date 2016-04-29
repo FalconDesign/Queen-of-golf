@@ -1,0 +1,20 @@
+section
+  .row
+    .repeat_all(ng-repeat='item  in articles | limitTo: 3: 3' ng-bind-html-unsafe="item")    
+      .amazing_facts.twelve.columns 
+        .amazing_container.nine.columns  
+          .fact_header
+            .big_eight(ng-repeat='number in item') {{number.number}}
+            h1(ng-repeat='number_title in item') {{number_title.number_title}} <span>{{number_title.header_title}}<span>
+      .content.twelve.columns
+        article.seven.columns(ng-repeat='thing in item')
+          div(ng-bind-html='thing.content')  {{thing.content}}
+          br
+          br
+          span(ng-repeat='quote in item') {{quote.quote}}
+          br
+          div(ng-bind-html='thing.smn_sass') {{thing.smn_sass}}</br>
+          br
+          | {{thing.girl_says}}</br>
+          br
+          span {{thing.girl_quote}}

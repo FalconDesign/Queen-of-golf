@@ -3,8 +3,6 @@ var app = angular.module('page_app', ['ngSanitize']);
 app.controller('PageController', ['$scope',function ($scope) {
 
 
-
-
 $scope.articles = [
 
   art = [
@@ -37,26 +35,42 @@ $scope.articles = [
   art = [
     {number: 5,
       number_title:'Five',
-      header_title: '',
-      content: 'It was love at first sight for Wangari. None of her family members play golf. She just loves the game.'}
+      header_title: 'Playing golf is not in the family genes!',
+      content: 'It was love at first sight for Wangari. None of her family members play golf. She just loves the game. ',
+      quote: '“I don’t know where she gets it, her father and I don’t play at all. Somehow she loved golf from as young as five, she used to sneak and follow the other golfers out to the course at school. The trainers came to us and told us to Chanelle wanted to give golf a shot and we were really surprised,” says her mother.'
+    }
   ],
   art = [
     {number: 4,
       number_title:'Four',
-      header_title: '',
-      content: 'Practice session are four to five times a week at Vet Lab or Muthaiga Golf Club.'}
+      header_title: 'Practices until she is perfect.',
+      content: 'Practice session are four to five times a week at Vet Lab or Muthaiga Golf Club.',
+      quote: '    “I like all kinds of shots. If it is far or close I don’t care, I’ll make them. That’s why I practice to shoot from all over and to learn. Even if I land in the sand I can get out of it, I just hit behind the ball.” '
+    }
   ],
   art = [
     {number: 3,
       number_title:'Three',
-      header_title: '',
-      content: 'Wangari’s coach is Charles Farrar, a former pro with the British PGA who has been a golf instructor for nearly two decades. During the session, Farrar makes changes to Wangari’s swings and shot. After a poor shot Farrar makes her adjust her hands a few degrees, barely noticeable to anyone watching.'}
+      header_title: 'Her coach is a British PGA',
+      content: 'Wangari’s coach is Charles Farrar, a former pro with the British PGA who has been a golf instructor for nearly two decades. During the session, Farrar makes changes to Wangari’s swings and shot. After a poor shot Farrar makes her adjust her hands a few degrees, barely noticeable to anyone watching.',
+      quote: '“That’s more like it! She’ll be quite good, we just have to keep working on these small things, the game is all about consistency, you know.” '
+    }
   ],
   art = [
     {number: 2,
       number_title:'Two',
-      header_title: '',
-      content: 'She not only wants to be the best but the very best golfer in the world. She is eyeing the top slot during the US Kids Golf World Championship.'}
+      header_title: 'She wants to be in the league of Woods and Phil Mickelson',
+      content: 'She not only wants to be the best but the very best golfer in the world. She is eyeing the top slot during the US Kids Golf World Championship.',
+      quote: '“That’s more like it! She’ll be quite good, we just have to keep working on these small things, the game is all about consistency, you know.” '
+    }
+  ],
+  art = [
+    {number: 1,
+      number_title:'One',
+      header_title: 'Wangari’s trophy room',
+      content: 'She not only wants to be the best but the very best golfer in the world. She is eyeing the top slot during the US Kids Golf World Championship.',
+      quote: '“I think I can win. I want to win it and I’ll be playing against my friends so it will be fun, but I still want to beat them.”'
+    }
   ]
 ];
 
