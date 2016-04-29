@@ -1,0 +1,57 @@
+@import 'skeleton/skeleton.scss'
+@import 'bourbon'
+
+.slider_one
+  background: $main-red
+  height: 670px
+  +display(flex)
+  +justify-content(center)
+
+  .slider_container
+    position: relative
+    border: 1px solid white
+    width: 80%
+    height: 100%
+
+    .slide
+      position: absolute
+      width: 80%
+      height: 80%
+      left: 50%
+      top: 50%
+      +transform(translate(-50%, -50%))
+
+    .slide:first-child
+      background: url('../pictures/pic_for_slide_second/slide_1.jpg') center center
+      background:
+        repeat: no-repeat
+        size: cover
+    .slide:nth-child(2)
+      background: url('../pictures/pic_for_slide_second/slide_2.jpg') center center
+      background:
+        repeat: no-repeat
+        size: cover
+
+    .slide:nth-child(3)
+      background: url('../pictures/pic_for_slide_second/slide_3.jpg') center center
+      background:
+        repeat: no-repeat
+        size: cover
+
+    .controller
+      width: 100%
+      border: 1px solid white
+      position: absolute
+      top: 50%
+      +transform(translate(0%, -50%))
+
+      .left_arrow
+        +size(60px)
+        float: left
+        background: gray
+        cursor: pointer
+      .right_arrow
+        +size(60px)
+        float: right
+        background: gray
+        cursor: pointer

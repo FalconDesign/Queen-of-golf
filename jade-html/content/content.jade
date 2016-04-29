@@ -1,1 +1,34 @@
 section
+  .row
+    .content.twelve.columns
+      article.seven.columns Exit Tiger Woods and Phil Mickelson. Enter Chanelle Wangari, an eight year old 
+              | Kenyan golfer who wants to give Woods a run for his money. </br>
+              br
+              | Wangari is a class three student at Makini School. </br>
+              | By the way, she turns nine in September but before then she wants to have </br>
+              | won the the US Kids Golf World Championship that will be held in Pinehurst,
+              | North Carolina from July 30th to August 1, 2015.
+    
+    
+    .amazing_facts.twelve.columns 
+      .amazing_container.nine.columns
+        h1 Here are 8 amazing facts about Wangari…
+    .repeat_all(ng-repeat='item  in articles | limitTo:3' ng-bind-html-unsafe="item")    
+      .amazing_facts.twelve.columns 
+        .amazing_container.nine.columns  
+          .fact_header
+            .big_eight(ng-repeat='number in item') {{number.number}}
+            h1(ng-repeat='number_title in item') {{number_title.number_title}} <span>{{number_title.header_title}}<span>
+      .content.twelve.columns
+        article.seven.columns(ng-repeat='thing in item') 
+          | {{thing.content}}
+          br
+          br
+          span(ng-repeat='quote in item') {{quote.quote}}
+          br
+          div(ng-bind-html='thing.smn_sass') {{thing.smn_sass}}</br>
+          br
+          | {{thing.girl_says}}</br>
+          br
+          span {{thing.girl_quote}}
+            

@@ -2,12 +2,22 @@ doctype html
 head
   meta(charset="utf-8")
   title QUEEN OF GOLF
+  link(href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic', rel='stylesheet', type='text/css')
   link(rel="stylesheet", href="/sass-css/main.css", media="screen", title="no title", charset="utf-8")
   
-body
+body(ng-app='page_app')
   
-  include container/container.jade
+  #page_content(ng-controller='PageController')
   
+    include container/container.jade
+  
+    include content/content.jade
+  
+    include slider-one/slider.jade
+  
+  script(src='../scripts/angular.min.js')
+  script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js")
+  script(src='../scripts/ng-controllers/my-ng-app.js')
   script(src="../scripts/jquery-1.10.2.js")
   script(src="../scripts/function.js")
     
