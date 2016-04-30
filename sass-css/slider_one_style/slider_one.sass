@@ -1,5 +1,6 @@
 @import 'skeleton/skeleton.scss'
 @import 'bourbon'
+@import 'animations.scss'
 
 .slider_one
   background: $main-red
@@ -43,14 +44,14 @@
       top: 50%
       +transform(translate(0%, -50%))
 
-      .left_arrow
+      .left_arrow_next
         +size(60px)
         float: left
         cursor: pointer
         background: url('../pictures/pic_for_slide_second/arrows.svg') 10px -5px
         background-repeat: no-repeat
         background-size: 300%
-      .right_arrow
+      .right_arrow_prev
         +size(60px)
         float: right
         cursor: pointer
@@ -66,3 +67,16 @@
         size: 18px
         family: $pt-serif
       color: white
+
+
+.box_img
+  position: relative
+  height: 100%
+
+.active_foto
+  z-index: 2
+  left: 10% !important
+  top: 12.3% !important
+  width: 80.5% !important
+  height: 75.5% !important
+  @extend .slide_one

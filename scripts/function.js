@@ -1,37 +1,43 @@
-$(function () {
-    $(".big_header_content h1").fitText(1, { minFontSize: '25pt', maxFontSize: '51pt' });
-});
 
+$(window).load(function () {
 
-(function( $ ){
+var setInt = setInterval(function () {
+  sliderOne()
+}, 3000);
 
-$.fn.fitText = function( kompressor, options ) {
-
-// Setup options
-var compressor = kompressor || 1,
-    settings = $.extend({
-      'minFontSize' : Number.NEGATIVE_INFINITY,
-      'maxFontSize' : Number.POSITIVE_INFINITY
-    }, options);
-
-return this.each(function(){
-
-  // Store the object
-  var $this = $(this);
-
-  // Resizer() resizes items based on the object width divided by the compressor * 10
-  var resizer = function () {
-    $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-  };
-
-  // Call once to set.
-  resizer();
-
-  // Call on resize. Opera debounces their resize by default.
-  $(window).on('resize.fittext orientationchange.fittext', resizer);
-
-});
-
+function sliderOne() {
+  $('.background_slide_2').delay(3000).fadeOut(3000).delay(3000).fadeIn(3000);
 };
 
-})( jQuery );
+firstSlider();
+
+});
+
+
+function firstSlider() {
+  $('.left_arrow_next').click(function () {
+    var $this = $(this);
+    curActiveFoto = $('.box_img').find('.active_foto'),
+    position = $('.box_img').children().index(curActiveFoto),
+    fotoNum = $('.box_img').length;
+
+    if (position > 1) {
+      $('.active_foto').removeClass('active_foto');
+      $('.box_img').children().first().addClass('active_foto');
+    } else {
+      $('.active_foto').removeClass('active_foto').next().addClass('active_foto');
+    };
+  });
+  $('.right_arrow_prev').click(function () {
+    var $this = $(this);
+    curActiveFoto = $('.box_img').find('.active_foto'),
+    position = $('.box_img').children().index(curActiveFoto),
+    fotoNum = $('.box_img').length;
+    if (position < 1) {
+      $('.active_foto').removeClass('active_foto');
+      $('.box_img').children().last().addClass('active_foto');
+    } else {
+      $('.active_foto').removeClass('active_foto').prev().addClass('active_foto');
+    };
+  });
+};
