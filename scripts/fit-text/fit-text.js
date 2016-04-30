@@ -1,5 +1,6 @@
 $(function () {
     $(".big_header_content h1").fitText(1, { minFontSize: '25pt', maxFontSize: '51pt' });
+
 });
 
 

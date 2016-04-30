@@ -7,7 +7,12 @@
   height: 670px
   +display(flex)
   +justify-content(center)
-
+  @media (max-width: 985px)
+    height: 740px
+  @media (max-width: 500px)
+    height: 850px
+  @media (max-width: 335px)
+    height: 910px
   .slider_container
     position: relative
     width: 80%
@@ -45,6 +50,8 @@
       +transform(translate(0%, -50%))
 
       .left_arrow_next
+        position: absolute
+        left: -40px
         +size(60px)
         float: left
         cursor: pointer
@@ -52,6 +59,8 @@
         background-repeat: no-repeat
         background-size: 300%
       .right_arrow_prev
+        position: absolute
+        right: -37px
         +size(60px)
         float: right
         cursor: pointer
@@ -67,11 +76,23 @@
         size: 18px
         family: $pt-serif
       color: white
-
+      @media (max-width: 985px)
+        top: 82%
+      @media (max-width: 600px)
+        top: 70%
+      @media (max-width: 335px)
+        top: 60%
 
 .box_img
   position: relative
-  height: 100%
+  height: 670px
+  @media (max-width: 600px)
+    height: 400px
+    top: 100px
+  @media (max-width: 500px)
+    top: 150px
+  @media (max-width: 330px)
+    top: 170px  
 
 .active_foto
   z-index: 2
