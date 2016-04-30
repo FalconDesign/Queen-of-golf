@@ -1,5 +1,6 @@
 @import 'skeleton/skeleton.scss'
 @import 'bourbon'
+@import 'animation.scss'
 
 .two
   overflow: hidden
@@ -14,6 +15,7 @@
   position: absolute
   width: 93%
   height:  80%
+  visibility: hidden
   +display(flex)
   +justify-content(space-around)
   +flex-wrap(wrap)
@@ -26,3 +28,84 @@
     background:
       position: center center
       size: cover
+
+
+  .slider:first-child
+    background: url('../pictures/pic_for_slide_three/queen_1.jpg')
+    background:
+      repeat: no-repeat
+      position: center center
+      size: cover
+  .slider:nth-child(2)
+    background: url('../pictures/pic_for_slide_three/queen_2.jpg')
+    background:
+      repeat: no-repeat
+      position: center center
+      size: cover
+
+
+// Classes For toggle Slider_3 //
+
+.source_img_one
+  background: url('../pictures/pic_for_slide_three/queen_3.jpg') !important
+  background:
+    repeat: no-repeat !important
+    size: cover !important
+.source_img_two
+  background: url('../pictures/pic_for_slide_three/field.jpg') !important
+  background:
+    repeat: no-repeat !important
+    size: cover !important
+
+/// Class for animation
+
+.jump_img_left
+  z-index: 5
+  @extend .move_from_left
+  visibility: visible !important
+
+.jump_img_right
+  z-index: 5
+  @extend .move_from_right
+  visibility: visible !important
+
+
+
+// Moving container Two //
+
+.moving_container:nth-child(2)
+
+  .slider:first-child
+    background: url('../pictures/pic_for_slide_three/queen_3.jpg')
+    background:
+      repeat: no-repeat
+      position: center center
+      size: cover
+
+  .slider:nth-child(2)
+    background: url('../pictures/pic_for_slide_three/field.jpg')
+    background:
+      repeat: no-repeat
+      position: center center
+      size: cover
+
+// Controller - lef and right arrows
+
+.controller
+  top: 40% !important
+  z-index: 6 !important
+
+  .left_arrow
+    +size(60px)
+    float: left
+    cursor: pointer
+    background: url('../pictures/pic_for_slide_second/arrows.svg') 10px -5px
+    background-repeat: no-repeat
+    background-size: 300%
+  .right_arrow
+    +size(60px)
+    float: right
+    cursor: pointer
+    background: url('../pictures/pic_for_slide_second/arrows.svg') -130px -5px
+    background-repeat: no-repeat
+    background-size: 300%

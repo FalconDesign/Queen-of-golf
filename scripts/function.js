@@ -9,12 +9,14 @@ function sliderOne() {
   $('.background_slide_2').delay(3000).fadeOut(3000).delay(3000).fadeIn(3000);
 };
 
-firstSlider();
+secondSlider();
+thirdSlider();
+
 
 });
 
 
-function firstSlider() {
+function secondSlider() {
   $('.left_arrow_next').click(function () {
     var $this = $(this);
     curActiveFoto = $('.box_img').find('.active_foto'),
@@ -40,4 +42,18 @@ function firstSlider() {
       $('.active_foto').removeClass('active_foto').prev().addClass('active_foto');
     };
   });
+};
+
+
+function thirdSlider() {
+  $('.left_arrow').on('click', function () {
+    $('.jump_img_right').removeClass('jump_img_right').addClass('jump_img_left');
+    $('.moving_container:first-child, .moving_container:nth-child(2)').toggleClass('jump_img_left');
+  });
+
+  $('.right_arrow').on('click', function () {
+    $('.jump_img_left').removeClass('jump_img_left').addClass('jump_img_right');
+    $('.moving_container:first-child, .moving_container:nth-child(2)').toggleClass('jump_img_right');
+  });
+
 };
