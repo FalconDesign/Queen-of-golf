@@ -3,10 +3,13 @@
 
 $pt-serif: 'PT Serif', serif
 
+
+
 .content
   position: relative
   +display(flex)
   +justify-content(center)
+  +flex-wrap(wrap)
   margin-top: 40px
 
   @media (max-width: 550px)
@@ -39,6 +42,8 @@ $pt-serif: 'PT Serif', serif
 
   .fact_header
     position: relative
+
+
 
     .big_eight
       position: absolute

@@ -2,32 +2,34 @@ doctype html
 head
   meta(charset="utf-8")
   title QUEEN OF GOLF
+  meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+  // The link of Google font PT Serif
   link(href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic', rel='stylesheet', type='text/css')
   link(rel="stylesheet", href="/sass-css/main.css", media="screen", title="no title", charset="utf-8")
   
 body(ng-app='page_app')
-  
-  #page_content(ng-controller='PageController')
+  // Here is ANGULAR controller for our page
+  #page_content(ng-controller='PageController') 
   
     include container/container.jade
   
     include content/content.jade
   
-    include slider-one/slider.jade
+    include slider_one/slider.jade
   
     include content_2/content_2.jade
     
-    include slider-two/slider_2.jade
+    include slider_two/slider_2.jade
     
     include content_3/content_3.jade
     
     include content_video/content_video.jade
   
-  script(src='../scripts/angular.min.js')
-  script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js")
-  script(src='../scripts/ng-controllers/my-ng-app.js')
-  script(src="../scripts/jquery-1.10.2.js")
-  script(src="../scripts/function.js")
-  script(src="../scripts/fit-text/fit-text.js")
+  script(src='../scripts/angular.min.js') //ANGULAR
+  script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js") // ANGULAR part to output html tegs from $scope
+  script(src='../scripts/ng-controllers/my-ng-app.js') // Our Angular Controller
+  script(src="../scripts/jquery-1.10.2.js") // JQUERY
+  script(src="../scripts/function.js") // MAIN script js
+  script(src="../scripts/fit-text/fit-text.js") // Fit text function
     
   

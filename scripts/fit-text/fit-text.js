@@ -1,3 +1,6 @@
+
+//Fit text helps us to keep aur big headers text Responsive!
+
 $(function () {
     $(".big_header_content h1").fitText(1, { minFontSize: '25pt', maxFontSize: '51pt' });
 

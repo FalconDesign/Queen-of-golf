@@ -1,13 +1,20 @@
+
 .container.slider_one
+  
   .slider_container
+    
     .box_img
+      // Img's that have different z-index 
       .img_slide_one.slide.active_foto
       .img_slide_two.slide
       .img_slide_three.slide
+        
     .controller
+      // Arrows that we use to slide img's
       .left_arrow_next
       .right_arrow_prev
+        
     .slider_content
-      | Wangari has mastered the art of the perfect swing and she’s still in primary school! Those of you heading to the course should take a quick lesson from these amazing pictures of Wangari in action!
+      | {{slider_one[0].content}}
       
     

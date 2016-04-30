@@ -1,2 +1,38 @@
 
-<section class="content"></section>
+<section>
+  <div class="row">
+    <!-- Here I'm Using Sceleton file to greate simple Grid-->
+    <div class="content twelve columns">
+      <article class="seven columns">
+        Exit Tiger Woods and Phil Mickelson. Enter Chanelle Wangari, an eight year old 
+        Kenyan golfer who wants to give Woods a run for his money. </br><br/>Wangari is a class three student at Makini School. </br>
+        By the way, she turns nine in September but before then she wants to have </br>
+        won the the US Kids Golf World Championship that will be held in Pinehurst,
+        North Carolina from July 30th to August 1, 2015.
+      </article>
+    </div>
+    <!-- This Part I use for ANGULAR LOOP-->
+    <div class="amazing_facts twelve columns"> 
+      <div class="amazing_container nine columns">
+        <h1>Here are 8 amazing facts about Wangari…</h1>
+      </div>
+    </div>
+    <div ng-repeat="item  in articles | limitTo:3" ng-bind-html-unsafe="item" class="repeat_all">   
+      <div class="amazing_facts twelve columns"> 
+        <div class="amazing_container nine columns"> 
+          <div class="fact_header">
+            <div ng-repeat="number in item" class="big_eight">{{number.number}}</div>
+            <h1 ng-repeat="number_title in item">{{number_title.number_title}} <span>{{number_title.header_title}}<span></h1>
+          </div>
+        </div>
+      </div>
+      <div class="content twelve columns">
+        <article ng-repeat="thing in item" class="seven columns">
+           
+          {{thing.content}}<br/><br/><span ng-repeat="quote in item">{{quote.quote}}</span><br/>
+          <div ng-bind-html="thing.smn_sass">{{thing.smn_sass}}</br></div><br/>{{thing.girl_says}}</br><br/><span>{{thing.girl_quote}}</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

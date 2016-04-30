@@ -1,16 +1,22 @@
+
 .container
-    .background_slide_1
+    .background_slide_1    
     .background_slide_2
+        // Shadow Created in the bottom of the container via lineae-gradient  
     .border_shadow_bottom
+      // Container for titles
     .container_big_header
       .big_header_content
-        h1 8 Amazing Facts About Kenya’s Eight Year Old Queen Of Golf Chanelle Wangari
+        h1 {{container[0].header}}
+        
       .small_header_content
-        h6 Tuko.co.ke spent a morning with her at the Muthaiga Golf Club </br> where she was working on her swing </br> with the help of her coach Charles Farrar.
+        h6(ng-bind-html='container[1].small_header') {{container[1].small_header}}
+        
       .data_small_content
-        .date 12 August 2015 
+        .date {{container[2].date}} 
         .eye_img
-        .views 5201
+        .views {{container[3].views}}
+        // Social icons on the left side of the container with position fixed
     .social_icons
       a(href='#').facebook
         .facebook_logo

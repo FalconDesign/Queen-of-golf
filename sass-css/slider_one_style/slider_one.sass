@@ -2,22 +2,24 @@
 @import 'bourbon'
 @import 'animations.scss'
 
+
 .slider_one
   background: $main-red
   height: 670px
   +display(flex)
   +justify-content(center)
+
   @media (max-width: 985px)
     height: 740px
   @media (max-width: 500px)
     height: 850px
   @media (max-width: 335px)
     height: 910px
+
   .slider_container
     position: relative
     width: 80%
     height: 100%
-
     .slide
       position: absolute
       width: 80%
@@ -28,17 +30,20 @@
 
     .slide:first-child
       background: url('../pictures/pic_for_slide_second/slide_1.jpg') center center
+      @include filter(grayscale(70%))
       background:
         repeat: no-repeat
         size: cover
     .slide:nth-child(2)
       background: url('../pictures/pic_for_slide_second/slide_2.jpg') center center
+      @include filter(grayscale(70%))
       background:
         repeat: no-repeat
         size: cover
 
     .slide:nth-child(3)
       background: url('../pictures/pic_for_slide_second/slide_3.jpg') center center
+      @include filter(grayscale(70%))
       background:
         repeat: no-repeat
         size: cover
@@ -92,7 +97,7 @@
   @media (max-width: 500px)
     top: 150px
   @media (max-width: 330px)
-    top: 170px  
+    top: 170px
 
 .active_foto
   z-index: 2

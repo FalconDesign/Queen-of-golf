@@ -1,5 +1,7 @@
+
 section
   .row
+    // Here I'm Using Sceleton file to greate simple Grid
     .content.twelve.columns
       article.seven.columns Exit Tiger Woods and Phil Mickelson. Enter Chanelle Wangari, an eight year old 
               | Kenyan golfer who wants to give Woods a run for his money. </br>
@@ -9,16 +11,18 @@ section
               | won the the US Kids Golf World Championship that will be held in Pinehurst,
               | North Carolina from July 30th to August 1, 2015.
     
-    
+    // This Part I use for ANGULAR LOOP
     .amazing_facts.twelve.columns 
       .amazing_container.nine.columns
-        h1 Here are 8 amazing facts about Wangari…
+        h1 {{content[0].title}}
+        
     .repeat_all(ng-repeat='item  in articles | limitTo:3' ng-bind-html-unsafe="item")    
       .amazing_facts.twelve.columns 
         .amazing_container.nine.columns  
           .fact_header
             .big_eight(ng-repeat='number in item') {{number.number}}
             h1(ng-repeat='number_title in item') {{number_title.number_title}} <span>{{number_title.header_title}}<span>
+            
       .content.twelve.columns
         article.seven.columns(ng-repeat='thing in item') 
           | {{thing.content}}

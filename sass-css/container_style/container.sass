@@ -3,10 +3,14 @@
 
 $main-red: #af1b15
 
+// Main contaier Styles
+
 .container
   min-width: 100%
   position: relative
   height: 620px
+
+  // Image that we animate
 
   .background_slide_1
     position: absolute
@@ -16,6 +20,8 @@ $main-red: #af1b15
     background: url('../pictures/queen_2.jpg') 9% center
     background-size: cover
     @include filter(brightness(70%))
+
+  // Image that we animate
 
   .background_slide_2
     left: 0
@@ -44,6 +50,8 @@ $main-red: #af1b15
     @media (max-width:850px)
       width: percentage(850/1350)
 
+    // Styles for the Huge responisve header
+
     .big_header_content
       h1
         color: white
@@ -69,6 +77,7 @@ $main-red: #af1b15
       @media (max-width: 470px)
         height: 60%
 
+
     .data_small_content
       +display(flex)
       color: white
@@ -86,6 +95,7 @@ $main-red: #af1b15
         width: 20px
         height: 25px
 
+  //Social Icons on the left side
 
   .social_icons
     position: absolute
@@ -95,9 +105,14 @@ $main-red: #af1b15
     right: 0
     top: 540px
 
+    @media (min-width: 1340px)
+      position: fixed
+      z-index: 9
     @media (max-width: 470px)
       left: 10%
-
+    @media (max-width: 300px)
+      top: 560px
+    // I created Sprite for the social icons
     .facebook,
     .twitter,
     .google_plus
@@ -130,6 +145,8 @@ $main-red: #af1b15
       &:hover
         background-position: -72px -45px
 
+    //Shadow down below of the container
+
   .border_shadow_bottom
     position: absolute
     top: 370px
@@ -137,3 +154,8 @@ $main-red: #af1b15
     min-width: 100%
     height: 250px
     background: -webkit-linear-gradient(top,transparent, black 120% )
+
+.logo_container
+  background: white
+  width: 100%
+  height: 80px

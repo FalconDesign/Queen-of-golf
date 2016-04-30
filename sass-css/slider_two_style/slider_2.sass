@@ -3,22 +3,32 @@
 @import 'animation.scss'
 
 .two
-  overflow: hidden
+  width: 100% !important
+  position: relative !important
 
   .slider_content
     width: 100%
 
 
 .moving_container
-  left: 40px
+  left: 16%!important
+  width: 70% !important
   top: 50px
   position: absolute
-  width: 93%
+  width: 65%
   height:  80%
   visibility: hidden
   +display(flex)
   +justify-content(space-around)
   +flex-wrap(wrap)
+
+  @media (max-width: 700px)
+    height: 50%
+    top: 122px
+  @media (max-width: 480px)
+    height: 30%
+    top: 227px
+    left: 15px
 
 
   .slider
@@ -28,6 +38,12 @@
     background:
       position: center center
       size: cover
+    @include filter(grayscale(70%))
+
+    @media (max-width: 1129px)
+      max-width: 50%
+      border: 2px solid black
+      +box-sizing(border-box)
 
 
   .slider:first-child
@@ -57,7 +73,7 @@
     repeat: no-repeat !important
     size: cover !important
 
-/// Class for animation
+/// Classes for animation
 
 .jump_img_left
   z-index: 5
@@ -99,13 +115,22 @@
     +size(60px)
     float: left
     cursor: pointer
-    background: url('../pictures/pic_for_slide_second/arrows.svg') 10px -5px
+    background: url('../pictures/pic_for_slide_second/arrows.svg') -0px -5px
     background-repeat: no-repeat
     background-size: 300%
+
+    @media (max-width: 400px)
+      border-radius: 50%
+      background-color: fade-out(gray, 0.4)
+
   .right_arrow
     +size(60px)
     float: right
     cursor: pointer
-    background: url('../pictures/pic_for_slide_second/arrows.svg') -130px -5px
+    background: url('../pictures/pic_for_slide_second/arrows.svg') -125px -5px
     background-repeat: no-repeat
     background-size: 300%
+
+    @media (max-width: 400px)
+      border-radius: 50%
+      background-color: fade-out(gray, 0.4)

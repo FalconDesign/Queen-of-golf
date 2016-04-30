@@ -1,6 +1,7 @@
 
 $(window).load(function () {
 
+// The animation for the first slider
 var setInt = setInterval(function () {
   sliderOne()
 }, 3000);
@@ -8,8 +9,9 @@ var setInt = setInterval(function () {
 function sliderOne() {
   $('.background_slide_2').delay(3000).fadeOut(3000).delay(3000).fadeIn(3000);
 };
-
+// The animation for the second slider
 secondSlider();
+// The animation for the second slider
 thirdSlider();
 
 
@@ -30,11 +32,15 @@ function secondSlider() {
       $('.active_foto').removeClass('active_foto').next().addClass('active_foto');
     };
   });
+
   $('.right_arrow_prev').click(function () {
+
     var $this = $(this);
+
     curActiveFoto = $('.box_img').find('.active_foto'),
     position = $('.box_img').children().index(curActiveFoto),
     fotoNum = $('.box_img').length;
+
     if (position < 1) {
       $('.active_foto').removeClass('active_foto');
       $('.box_img').children().last().addClass('active_foto');
@@ -43,6 +49,9 @@ function secondSlider() {
     };
   });
 };
+
+
+
 
 
 function thirdSlider() {
